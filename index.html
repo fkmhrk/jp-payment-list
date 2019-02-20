@@ -4,7 +4,27 @@
   <title>日本の○○ Pay</title>
 </head>
 <body>
+  <script id="template" type="text/ractive">
+    <header class="mdc-top-app-bar">
+        <div class="mdc-top-app-bar__row">
+          <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+            <span class="mdc-top-app-bar__title">日本の○○ Pay</span>
+          </section>
+        </div>
+      </header>
+      <div style="height: 70px;"></div>    
+      <main>
+        <ul class="mdc-list mdc-card">
+        {{#items:i}}
+          <li class="mdc-list-item" tabindex="{{i}}">
+            <span class="mdc-list-item__text">{{.name}}</span>
+          </li>
+        {{/items}}
+        </ul>
+      </main>
+  </script>
 
+<script src="./data.js"></script>
 <script src="./dist/main.js"></script>
 </body>
 </html>
